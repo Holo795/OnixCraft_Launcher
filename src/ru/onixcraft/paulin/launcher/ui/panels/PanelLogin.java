@@ -24,7 +24,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
 import ru.onixcraft.paulin.launcher.OnixCraftLauncher;
-import ru.onixcraft.paulin.launcher.events.events;
+import ru.onixcraft.paulin.launcher.events.Events;
 import ru.onixcraft.paulin.launcher.ui.PanelManager;
 import ru.onixcraft.paulin.launcher.ui.panel.Panel;
 import ru.onixcraft.paulin.launcher.ui.window.button.WindowExitButton;
@@ -159,7 +159,7 @@ public class PanelLogin extends Panel {
     private void login(String username, String password) throws JSONException {
         try {
             if (Utils.auth(username, password)) {
-                events.Skinimg(username);
+                Events.skinImg(username);
                 if (Utils.getInfo(username).getString("active").contains("1")) {
                     Utils.config.put("username", username);
                     Utils.config.put("token", Utils.getInfo(username).getString("token"));

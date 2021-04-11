@@ -5,7 +5,6 @@ import org.json.JSONException;
 import javafx.geometry.HPos;
 import javafx.geometry.VPos;
 import javafx.scene.Cursor;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.ScrollPane.ScrollBarPolicy;
@@ -15,7 +14,7 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
 import ru.onixcraft.paulin.launcher.OnixCraftLauncher;
-import ru.onixcraft.paulin.launcher.events.events;
+import ru.onixcraft.paulin.launcher.events.Events;
 import ru.onixcraft.paulin.launcher.ui.PanelManager;
 import ru.onixcraft.paulin.launcher.ui.ServerTab;
 import ru.onixcraft.paulin.launcher.ui.panel.Panel;
@@ -168,7 +167,7 @@ public class HomePanel extends Panel {
 		}
 		creditLabel.setId("creditLabel");
 		
-		ImageView skinImg = new ImageView(events.skin);
+		ImageView skinImg = new ImageView(Events.skin);
 		GridPane.setVgrow(skinImg, Priority.ALWAYS);
 		GridPane.setHgrow(skinImg, Priority.ALWAYS);
 		GridPane.setValignment(skinImg, VPos.BOTTOM);

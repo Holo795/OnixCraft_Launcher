@@ -10,11 +10,11 @@ import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
 import javafx.scene.image.WritableImage;
 
-public class events {
+public class Events {
 	
 	public static Image skin;
 		
-	public static void Skinimg(String username) {
+	public static void skinImg(String username) {
 		
 		try {
             URLConnection connection = new URL(/*https://onix-craft.ru/renderSkin."+username+".200*/"https://holo.chaun14.fr/skinview.php?u="+username+"&size=200").openConnection();
