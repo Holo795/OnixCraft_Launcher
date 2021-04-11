@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 import org.json.JSONException;
 
 import javafx.stage.Stage;
-import ru.onixcraft.paulin.launcher.events.events;
+import ru.onixcraft.paulin.launcher.events.Events;
 import ru.onixcraft.paulin.launcher.ui.PanelManager;
 import ru.onixcraft.paulin.launcher.ui.panels.HomePanel;
 import ru.onixcraft.paulin.launcher.ui.panels.PanelLogin;
@@ -29,7 +29,7 @@ public class OnixCraftLauncher {
 			String token = Utils.config.get("token");
 			try {
 				if(Utils.reAuth(username, token)) {
-					events.Skinimg(username);
+					Events.skinImg(username);
 					if(Utils.getInfo(username).getString("active").contains("1")) {
 						Utils.config.put("username", username);
 						Utils.config.put("token", Utils.getInfo(username).getString("token"));
