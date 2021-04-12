@@ -193,6 +193,14 @@ public class Utils {
 		}
 	}
 
+	public static void openFolder(File dir) {
+		try {
+			Desktop.getDesktop().open(dir);
+		} catch (IOException e) {
+			System.err.println(e.getMessage());
+		}
+	}
+
 	public static boolean auth(String username, String password) throws IOException, NoSuchAlgorithmException {
 
 		MessageDigest digest = MessageDigest.getInstance("SHA-256");
