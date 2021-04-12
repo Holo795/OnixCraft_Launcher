@@ -39,8 +39,6 @@ public class PanelManager {
 		this.stage.setScene(scene);
 		this.stage.setFocused(true);
 
-		if(Utils.config.get("save") == null) Utils.config.put("save", "");
-		
 		if (!Utils.config.get("save").contains("true")) {
 			if (Utils.config.get("username") == null) {
 				Utils.config.put("username", "");
@@ -51,8 +49,10 @@ public class PanelManager {
 		}
 		if (Utils.config.get("save") == null)
 			Utils.config.put("save", "");
-		if (Utils.config.get("ram") == null)
+		if (Utils.config.get("ram") == null || Utils.config.get("ram").equals(""))
 			Utils.config.put("ram", "1024");
+		if (Utils.config.get("performanceMod") == null || Utils.config.get("performanceMod").equals(""))
+			Utils.config.put("performanceMod", "false");
 
 		this.layout.setOnMousePressed(new EventHandler<MouseEvent>() {
 			@Override
