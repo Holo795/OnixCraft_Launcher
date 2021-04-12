@@ -42,6 +42,11 @@
 	-fx-font-weight: bold;
 }
 
+#memoryLabel {
+    -fx-translate-y: -45;
+    -fx-font-size: 16;
+}
+
 #optionBox {
 	-fx-translate-y: -151;
 	-fx-translate-x: 82;
@@ -61,6 +66,60 @@
 
 #optionBox:selected .mark {
 	-fx-background-color: #C00808;
+}
+
+#titleLabel {
+    -fx-font-size: 25;
+    -fx-translate-y: 2;
+    -fx-font-weight: bold;
+}
+
+#performLabel {
+    -fx-translate-y: 72;
+    -fx-translate-x: 2;
+}
+
+#resetButton {
+	-fx-translate-y: -85;
+	-fx-translate-x: -20;
+	-fx-graphic: url('setting/s_top_2x_resetbutton_in_act.png');
+	-fx-background-color: transparent;
+}
+
+#resetButton:hover {
+	-fx-graphic: url('setting/s_top_2x_resetbutton_act.png');
+}
+
+#openButton {
+	-fx-translate-y: -85;
+	-fx-translate-x: 25;
+	-fx-graphic: url('setting/s_top_2x_openbutton_in_act.png');
+	-fx-background-color: transparent;
+}
+
+#openButton:hover {
+	-fx-graphic: url('setting/s_top_2x_openbutton_act.png');
+}
+
+#doneButton {
+	-fx-translate-y: -45;
+	-fx-graphic: url('setting/s_set_donebutton_in_act.png');
+	-fx-background-color: transparent;
+}
+
+#doneButton:hover {
+	-fx-graphic: url('setting/s_set_donebutton_act.png');
+}
+
+#dirLabel {
+    -fx-max-height: 25;
+	-fx-min-height: 25;
+	-fx-max-width: 328;
+	-fx-min-width: 328;
+	-fx-translate-y: 90;
+	-fx-translate-x: 32;
+	-fx-background-color: transparent;
+	-fx-text-fill: white;
 }
 
 
