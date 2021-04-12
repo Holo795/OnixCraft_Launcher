@@ -16,14 +16,13 @@ public class WindowResetButton extends WindowButton {
     @Override
     public void onClick() {
         if(!deleteDirectory(Utils.dir)) System.out.println("File can't be deleted");
-        Utils.dir.mkdirs();
-        Utils.config.load();
     }
 
     public boolean deleteDirectory(File directoryToBeDeleted) {
         File[] allContents = directoryToBeDeleted.listFiles();
         if (allContents != null) {
             for (File file : allContents) {
+                if(!file.getName().equals("launcher.properties"))
                     deleteDirectory(file);
             }
         }
