@@ -34,11 +34,6 @@ public class OptionPanel {
     private double ramOldValue = 0.0;
     private Boolean perfMod = false;
 
-    private WindowExitButton exitButton;
-    private WindowResetButton resetButton;
-    private WindowOpenButton openButton;
-    private WindowDoneButton doneButton;
-
     @SuppressWarnings("restriction")
     public OptionPanel() {
 
@@ -63,13 +58,13 @@ public class OptionPanel {
         GridPane.setValignment(optionPane, VPos.CENTER);
         GridPane.setHalignment(optionPane, HPos.CENTER);
 
-        exitButton = new WindowExitButton(optionPane, "CloseO", VPos.TOP, HPos.RIGHT);
+        WindowExitButton exitButton = new WindowExitButton(optionPane, "CloseO", VPos.TOP, HPos.RIGHT);
         exitButton.getButton().setOnMouseClicked(e -> {
             stage.close();
         });
 
-        resetButton = new WindowResetButton(optionPane, "resetButton", VPos.CENTER, HPos.RIGHT);
-        openButton = new WindowOpenButton(optionPane, "openButton", VPos.CENTER, HPos.LEFT);
+        WindowResetButton resetButton = new WindowResetButton(optionPane, "resetButton", VPos.CENTER, HPos.RIGHT);
+        WindowOpenButton openButton = new WindowOpenButton(optionPane, "openButton", VPos.CENTER, HPos.LEFT);
 
         Label titleLabel = new Label("Настройки");
         GridPane.setVgrow(titleLabel, Priority.ALWAYS);
@@ -141,13 +136,12 @@ public class OptionPanel {
                     if(new_val) {
                         slider.setValue(mxbean.getFreePhysicalMemorySize()/ (1024 * 1024) - 1024 < 1024 ?
                          1024 : mxbean.getFreePhysicalMemorySize()/ (1024 * 1024) - 1024);
-                        System.out.println(mxbean.getFreePhysicalMemorySize()/ (1024 * 1024));
                     } else {
                         slider.setValue(ramOldValue);
                     }
                 });
 
-        doneButton = new WindowDoneButton(optionPane, "doneButton", VPos.BOTTOM, HPos.CENTER);
+        WindowDoneButton doneButton = new WindowDoneButton(optionPane, "doneButton", VPos.BOTTOM, HPos.CENTER);
         doneButton.getButton().setOnMouseClicked(e -> {
             if(ramValue != 0.0){
                 Utils.config.put("ram", (Math.round((Double)ramValue)+""));

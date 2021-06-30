@@ -394,6 +394,22 @@
  	-fx-background-color: transparent;
 }
 
+#sliderPane {
+    -fx-translate-x: -100;
+    -fx-background-color: white;
+}
+
+#srvList {
+    -fx-translate-y: 125;
+    -fx-translate-x: 26;
+    -fx-text-fill: rgb(182,183,201);
+    /*-fx-font-weight: bold;*/
+    -fx-font-size: 27px;
+}
+
+#srvList:hover {
+    -fx-text-fill: rgb(159, 0, 11);
+}
 
 
 
